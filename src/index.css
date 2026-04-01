@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: 248 250 252;
+  --surface-raised: 255 255 255;
+  --surface-overlay: 255 255 255;
+  --border: 226 232 240;
+  --border-strong: 203 213 225;
+  --text: 15 23 42;
+  --text-muted: 71 85 105;
+  --text-subtle: 100 116 139;
+  --primary: 10 49 83;
+  --primary-hover: 14 70 115;
+  --primary-muted: 220 241 250;
+  --secondary: 120 194 233;
+  --secondary-hover: 90 175 220;
+  --secondary-muted: 225 243 252;
+  --danger: 220 38 38;
+  --danger-muted: 254 226 226;
+  --success: 22 163 74;
+  --success-muted: 220 252 231;
+  --warning: 217 119 6;
+  --warning-muted: 254 243 199;
+  --info: 37 99 235;
+  --info-muted: 219 234 254;
+  --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(15 23 42 / 0.08), 0 2px 4px -2px rgb(15 23 42 / 0.06);
+  --shadow-ring: 0 0 0 3px rgb(10 49 83 / 0.25);
+}
+
+body {
+  @apply bg-surface text-text antialiased;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+#root {
+  @apply min-h-screen;
+}
