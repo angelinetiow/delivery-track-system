@@ -1,3 +1,4 @@
+import { publicUrl } from "@/lib/public-url";
 import type { DeliveryOrder, Driver, RouteOption, Vehicle } from "./types";
 
 /** Fixed anchor so relative times stay consistent (no Date mutation). */
@@ -9,11 +10,11 @@ const dueHours = (hours: number) => iso(new Date(ANCHOR + hours * 3600000));
 
 /** Placeholder assets (reliable for demo; no binary files in repo). */
 export const PLACEHOLDER = {
-  signature: "/signature.png",
+  signature: publicUrl("signature.png"),
   photoDropoff:
     "https://placehold.co/640x400/e2e8f0/334155/png?text=Drop-off+photo",
   /** @deprecated Use `LIVE_TRACKING_MAP_URL` from `@/lib/map-assets` in UI. */
-  mapPattern: "/map.png",
+  mapPattern: publicUrl("map.png"),
 };
 
 export const seedVehicles: Vehicle[] = [
