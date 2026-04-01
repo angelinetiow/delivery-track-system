@@ -6,9 +6,12 @@ import Orders from "@/pages/Orders";
 import RoutePlanning from "@/pages/RoutePlanning";
 
 export default function App() {
+  const basename =
+    import.meta.env.BASE_URL.replace(/\/$/, "") || undefined;
+
   return (
     <AppStateProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route element={<AppShell />}>
             <Route index element={<Dashboard />} />
